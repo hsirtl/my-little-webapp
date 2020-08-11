@@ -3,5 +3,4 @@ A little Web Application (.NET Core) for working with GitHub features (Actions, 
 
 Covers following DevOps-aspects:
 * Continuous Integration (CI)
-
-End
+* Continuous Integration + Continuous Deployment (CI/CD)
