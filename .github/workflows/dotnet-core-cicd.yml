@@ -33,6 +33,12 @@ jobs:
         with:
           dotnet-version: ${{ env.DOTNET_VERSION }} 
       
+      # Show available .NET Core SDK versions
+      - name: Show available .NET Core SDKs
+        run: |
+          dotnet --version
+          dotnet --list-sdks
+      
       # Run dotnet build and publish
       - name: dotnet build and publish
         run: |
