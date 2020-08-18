@@ -31,5 +31,5 @@ jobs:
     - name: Upload Artifact
       uses: actions/upload-artifact@v2
       with:
-        name: mylittlewebapp
-        path: bin\Release\Publish
+        name: my-little-webapp
+        path: /home/runner/work/my-little-webapp/my-little-webapp/bin/Release/netcoreapp3.1/
