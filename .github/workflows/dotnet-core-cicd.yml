@@ -20,7 +20,7 @@ env:
   DOTNET_VERSION: '3.1.x'
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
 
@@ -43,7 +43,14 @@ jobs:
       - name: dotnet build and publish
         run: |
           dotnet build --configuration Release
-          dotnet publish -c Release -o myapp 
+          dotnet publish -c Release -o my-little-webapp
+      
+      # Upload the published result as an artifact
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: my-little-webapp
+          path: /home/runner/work/my-little-webapp/my-little-webapp/my-little-webapp/
           
       # Deploy to Azure Web apps
       - name: 'Run Azure webapp deploy action using publish profile credentials'
