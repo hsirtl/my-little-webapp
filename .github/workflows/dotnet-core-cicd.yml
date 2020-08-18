@@ -52,6 +52,7 @@ jobs:
           path: /home/runner/work/my-little-webapp/my-little-webapp/my-little-webapp/     
 
   deploy:
+    needs: [build]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/download-artifact@v2
